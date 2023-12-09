@@ -1,4 +1,4 @@
-import { Menu, Sparkle } from "lucide-react";
+import {  Sparkle } from "lucide-react";
 import Link from "next/link";
 import { Poppins } from "next/font/google";
 import {UserButton} from '@clerk/nextjs';
@@ -7,6 +7,7 @@ import {UserButton} from '@clerk/nextjs';
 import {cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "./mode-toggle";
+import MobileSidebar from "./mobile-sidebar";
 
 
 const font = Poppins({
@@ -18,7 +19,7 @@ const Navbar = () => {
         <div className="fixed h-16 w-full z-50 items-center flex justify-between px-4 py-2 border-b border-primary/10 bg-secondary">
             <div className="flex items-center">
            
-                    <Menu className="block md:hidden"/>
+                    <MobileSidebar />
                     <Link href='/'>
                         <h1 className={cn("hidden md:block text-xl md:text-2xl text-primary font-bold", font.className)}><span className="text-2xl md:text-3xl text-green-500">S</span>mart Comapnion</h1>
                     </Link>
