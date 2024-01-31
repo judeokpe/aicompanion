@@ -26,7 +26,7 @@ const Sidebar = () => {
        
     ]
     const router = useRouter()
-    const onNavigate = (url:string, pro:boolean) =>{
+    const onNavigate = (url:string, isPro:boolean) =>{
             // todo pro
             router.push(url);
     }

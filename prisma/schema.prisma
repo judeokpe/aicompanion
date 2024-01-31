@@ -15,12 +15,14 @@ model Category {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
   companions Companion[]
+  
 }
 
 model Companion {
  id String @id @default(auto()) @map("_id") @db.ObjectId
+ 
  userId String @db.ObjectId
- userName String
+ userName String 
  src String
  name String 
  description String
@@ -32,6 +34,7 @@ model Companion {
 
  category Category @relation(fields: [categoryId], references: [id])
 categoryId String @db.ObjectId
+
 @@index([categoryId])
 @@fulltext([name])
 }
